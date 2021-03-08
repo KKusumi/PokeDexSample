@@ -1,0 +1,38 @@
+import dependencies.Dep
+
+apply from: "${rootDir.absolutePath}/android_common_build.gradle"
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // AndroidX
+    implementation Dep.AndroidX.appCompat
+    implementation Dep.AndroidX.coreKtx
+    implementation Dep.AndroidX.constraintLayout
+
+    // Lifecycle
+    implementation Dep.AndroidX.Lifecycle.liveData
+    implementation Dep.AndroidX.Lifecycle.liveDataCoreKtx
+    implementation Dep.AndroidX.Lifecycle.liveDataKtx
+
+    // Navigation
+    implementation Dep.AndroidX.Navigation.navigationFragmentKtx
+    implementation Dep.AndroidX.Navigation.navigationUiKtx
+
+    // Google
+    implementation Dep.Google.material
+
+    // Epoxy
+    implementation Dep.Epoxy.epoxy
+    implementation Dep.Epoxy.dataBinding
+    kapt Dep.Epoxy.processor
+}

@@ -1,16 +1,17 @@
 import dependencies.Dep
 
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs.kotlin"
+
+kapt {
+    correctErrorTypes = true
+}
 
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "com.example.pokedex"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -36,24 +37,15 @@ android {
 }
 
 dependencies {
-    implementation project(':data:api')
-    implementation project(':data:local')
-    implementation project(':domain')
-    implementation project(':model')
-    implementation project(':presentation:home')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // Kotlin
     implementation Dep.Kotlin.stdLib
 
+    // Coroutine
+    implementation Dep.Kotlin.Coroutine.core
+    implementation Dep.Kotlin.Coroutine.android
+
     // AndroidX
     implementation Dep.AndroidX.coreKtx
-    implementation Dep.AndroidX.appCompat
-    implementation Dep.AndroidX.constraintLayout
-
-    // Google
-    implementation Dep.Google.material
-
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
