@@ -17,6 +17,8 @@
             <option value="$PROJECT_DIR$/data/local" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/model" />
+            <option value="$PROJECT_DIR$/presentation" />
+            <option value="$PROJECT_DIR$/presentation/home" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
