@@ -48,4 +48,14 @@ dependencies {
 
     // AndroidX
     implementation Dep.AndroidX.coreKtx
+
+    // Koin
+    implementation Dep.Koin.core
+    implementation Dep.Koin.coreExt
+    implementation Dep.Koin.android
+    implementation Dep.Koin.androidScope
+    implementation Dep.Koin.androidViewModel
+    implementation Dep.Koin.androidExt
+    implementation Dep.Koin.androidxExt
+    implementation Dep.Koin.androidxViewModel
 }
