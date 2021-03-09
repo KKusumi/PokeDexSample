@@ -1,0 +1,6 @@
+apply from: "${rootDir.absolutePath}/presentation/presentation_common_build.gradle"
+
+dependencies {
+    implementation project(':model')
+    implementation project(':domain')
+}
