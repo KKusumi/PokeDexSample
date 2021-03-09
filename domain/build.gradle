@@ -1,1 +1,16 @@
+import dependencies.Dep
+
 apply from: "${rootDir.absolutePath}/android_common_build.gradle"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':data:api')
+    implementation project(':model')
+    implementation project(':repository')
+
+    // KotlinResult
+    implementation Dep.Other.KotlinResult.kotlinResult
+}
