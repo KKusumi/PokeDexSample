@@ -40,16 +40,27 @@ dependencies {
     implementation project(':data:local')
     implementation project(':domain')
     implementation project(':model')
-    implementation project(':presentation:home')
     implementation project(':repository')
+    implementation project(':presentation:home')
+    implementation project(':presentation:common')
 
     // Kotlin
     implementation Dep.Kotlin.stdLib
 
+    // Koin
+    implementation Dep.Koin.core
+    implementation Dep.Koin.coreExt
+    implementation Dep.Koin.android
+    implementation Dep.Koin.androidScope
+    implementation Dep.Koin.androidViewModel
+    implementation Dep.Koin.androidExt
+    implementation Dep.Koin.androidxExt
+    implementation Dep.Koin.androidxViewModel
+
     // AndroidX
-    implementation Dep.AndroidX.coreKtx
-    implementation Dep.AndroidX.appCompat
     implementation Dep.AndroidX.constraintLayout
+    implementation Dep.AndroidX.Navigation.navigationFragmentKtx
+    implementation Dep.AndroidX.Navigation.navigationUiKtx
 
     // Google
     implementation Dep.Google.material
