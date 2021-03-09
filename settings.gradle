@@ -1,8 +1,8 @@
-include ':repository'
 rootProject.name = "PokeDexSample"
 include ':app',
         ':data:api',
         ':data:local',
         ':domain',
         ':model',
-        ':presentation:home'
+        ':presentation:home',
+        ':repository'
